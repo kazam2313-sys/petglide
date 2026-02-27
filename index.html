@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PetGlide | Premium Anti-Gravity Veterinary Care & Wellness</title>
+    <meta name="description"
+        content="Experience the future of pet care at PetGlide. We provide high-end, futuristic veterinary services, instant vaccine shots, and anti-gravity wellness for dogs, cats, birds, and exotic pets. Book your consultation today!">
+    <meta name="keywords"
+        content="virtual pet clinic, anti-gravity pet care, futuristic vet, cat grooming, dog wellness, pet vaccines, exotic pet care, PetGlide">
+    <meta name="author" content="PetGlide Team">
+    <link rel="canonical" href="https://petglide.com/">
+
+    <!-- Social Media / Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://petglide.com/">
+    <meta property="og:title" content="PetGlide | Premium Anti-Gravity Veterinary Care">
+    <meta property="og:description"
+        content="Elevating pet health with futuristic anti-gravity wellness and tech-optimized care.">
+    <meta property="og:image" content="https://petglide.com/pets_group.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://petglide.com/">
+    <meta property="twitter:title" content="PetGlide | Premium Anti-Gravity Veterinary Care">
+    <meta property="twitter:description"
+        content="Elevating pet health with futuristic anti-gravity wellness and tech-optimized care.">
+    <meta property="twitter:image" content="https://petglide.com/pets_group.png">
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Floating Particles Canvas -->
+    <canvas id="particle-canvas"></canvas>
+
+    <!-- Ambient Background Elements -->
+    <div class="ambient-circle circle-1"></div>
+    <div class="ambient-circle circle-2"></div>
+
+    <!-- Navigation -->
+    <nav id="main-nav">
+        <div class="logo">PET<span style="color: var(--text-main)">GLIDE</span></div>
+        <div class="nav-links">
+            <button class="lang-toggle" id="toggle-lang" data-lang="en">Urdu</button>
+            <a href="#categories" data-key="nav-categories">Categories</a>
+            <a href="#services" data-key="nav-services">Services</a>
+            <a href="#directory" data-key="nav-directory">Veterinary</a>
+            <a href="#blog" data-key="nav-blog">Blog</a>
+            <a href="#contact" data-key="nav-contact">Consultation</a>
+            <div id="auth-nav-area">
+                <a href="#" class="login-btn" id="open-login">Login</a>
+            </div>
+        </div>
+        <div class="nav-right" style="display: flex; align-items: center; gap: 20px;">
+            <div class="search-box">
+                <input type="text" id="global-search" placeholder="Search symptoms..."
+                    style="padding: 8px 15px; border-radius: 20px; border: 1px solid #eee; outline: none; background: #f0f4f8;">
+            </div>
+            <a href="https://www.facebook.com/share/1825K6NEqk/" target="_blank" class="social-nav-link"
+                title="Follow us on Facebook">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <div class="menu-toggle" id="mobile-menu-toggle" style="display: none; cursor: pointer; font-size: 1.5rem;">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content" id="parallax-hero">
+            <h1 data-key="hero-title">Your Pet's Health, <span
+                    style="font-weight: 300; font-style: italic;">Elevated.</span></h1>
+            <p data-key="hero-desc">Experience the future of pet wellness with our anti-gravity care approach. Light,
+                airy, and tailored for every species.</p>
+            <div class="hero-cta">
+                <button class="submit-btn" style="width: auto; padding: 15px 40px;">Get Started</button>
+            </div>
+        </div>
+        <img src="pets_group.png" alt="Futuristic Pet Group" class="hero-img" id="hero-img">
+    </section>
+
+    <!-- Search / Filter Results Area -->
+    <div id="search-overlay" style="display: none; padding: 20px; text-align: center; background: #fff;">
+        <h3>Search Results</h3>
+        <div id="search-results-grid" class="categories-grid"></div>
+    </div>
+
+    <!-- Categories Section -->
+    <section id="categories" data-scroll>
+        <div class="section-title">
+            <h2>Pet Categories</h2>
+            <p>Specialized care for every member of your floating family.</p>
+        </div>
+
+        <div class="categories-grid" id="category-list">
+            <!-- Cats -->
+            <div class="category-card" data-category="cats">
+                <i class="fas fa-cat"></i>
+                <h3>Cats (بلیاں)</h3>
+                <ul>
+                    <li><i class="fas fa-check"></i> Premium Nutrition</li>
+                    <li><i class="fas fa-check"></i> Expert Grooming</li>
+                    <li><i class="fas fa-check"></i> Rare Breeds</li>
+                </ul>
+            </div>
+
+            <!-- Dogs -->
+            <div class="category-card" data-category="dogs">
+                <i class="fas fa-dog"></i>
+                <h3>Dogs (کتے)</h3>
+                <ul>
+                    <li><i class="fas fa-check"></i> Behavioral Training</li>
+                    <li><i class="fas fa-check"></i> Health Checkups</li>
+                    <li><i class="fas fa-check"></i> Joint Exercise</li>
+                </ul>
+            </div>
+
+            <!-- Birds -->
+            <div class="category-card" data-category="birds">
+                <i class="fas fa-dove"></i>
+                <h3>Birds (پرندے)</h3>
+                <ul>
+                    <li><i class="fas fa-check"></i> Aero-Caging</li>
+                    <li><i class="fas fa-check"></i> Seed Mixes</li>
+                    <li><i class="fas fa-check"></i> Seasonal Care</li>
+                </ul>
+            </div>
+
+            <!-- Exotic -->
+            <div class="category-card" data-category="exotic">
+                <i class="fas fa-rabbit"></i>
+                <h3>Exotic Pets</h3>
+                <ul>
+                    <li><i class="fas fa-check"></i> Rabbit Habitats</li>
+                    <li><i class="fas fa-check"></i> Hamster Wheels</li>
+                    <li><i class="fas fa-check"></i> Turtle Tanks</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" data-scroll style="background: #fdfdfd;">
+        <div class="section-title">
+            <h2>Our Services</h2>
+        </div>
+        <div class="service-list">
+            <div class="service-card">
+                <i class="fas fa-bell"></i>
+                <h4>Vaccination Reminders</h4>
+                <p>Never miss a shot again with our automated alerts.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-store"></i>
+                <h4>Pet Food Store</h4>
+                <p>Premium organic food for all breeds.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-heartbeat"></i>
+                <h4>Wellness Scans</h4>
+                <p>Advanced diagnostic tools for proactive health.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-syringe"></i>
+                <h4>Instant Vaccine Shots</h4>
+                <p>Fast, painless vaccination for all pet species with digital tracking.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" data-scroll>
+        <div class="section-title">
+            <h2>What Our Owners Say</h2>
+            <p>Real stories from our PetGlide family.</p>
+        </div>
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <div class="testimonial-header">
+                    <h4>Luna (Husky) <span>- Sarah Miller</span></h4>
+                </div>
+                <p>"Luna used to tremble the moment we entered a clinic. With PetGlide's floating grooming pods, she
+                    felt weightless and calm. It's the first time she's come home happy and stress-free. Thank you for
+                    changing our lives!"</p>
+            </div>
+            <div class="testimonial-card">
+                <div class="testimonial-header">
+                    <h4>Oliver (Tabby Cat) <span>- David Chen</span></h4>
+                </div>
+                <p>"At 14, Oliver's arthritis made every vet visit a painful ordeal. The anti-gravity examination tables
+                    allowed him to hover comfortably, taking the pressure off his joints. I actually saw him purring
+                    during his scan. PetGlide is truly a blessing."</p>
+            </div>
+            <div class="testimonial-card">
+                <div class="testimonial-header">
+                    <h4>Bella (Golden Retriever) <span>- Emily Watson</span></h4>
+                </div>
+                <p>"Bella's recovery was expected to be slow and difficult. The zero-gravity recovery suite helped her
+                    move without pain, speeding up her healing process significantly. The care and technology here are
+                    simply unmatched."</p>
+            </div>
+            <div class="testimonial-card">
+                <div class="testimonial-header">
+                    <h4>Milo (Pug) <span>- James Wilson</span></h4>
+                </div>
+                <p>"Pugs often struggle with breathing when stressed. The tranquil, airy environment at PetGlide kept
+                    Milo's heart rate low and his breathing steady. I've never felt more confident in a veterinary
+                    team."</p>
+            </div>
+            <div class="testimonial-card">
+                <div class="testimonial-header">
+                    <h4>Coco (Rabbit) <span>- Sofia Rodriguez</span></h4>
+                </div>
+                <p>"Coco is so delicate and easily frightened. The minimalist, quiet clinic and the gentle tech-assisted
+                    handling made her checkup feel like a breeze. I'm so grateful to have found a place that treats her
+                    with such care."</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Veterinary Directory -->
+    <section id="directory" data-scroll>
+        <div class="section-title">
+            <h2>Veterinary Directory</h2>
+        </div>
+        <div class="categories-grid" id="vet-list">
+            <div class="category-card" style="text-align: left; padding: 30px;">
+                <h4 style="color: var(--primary);">City Pet Clinic</h4>
+                <p>Expert surgery & general practice.</p>
+                <small>123 Gravity Lane</small>
+            </div>
+            <div class="category-card" style="text-align: left; padding: 30px;">
+                <h4 style="color: var(--primary);">Happy Paws Hospital</h4>
+                <p>24/7 Emergency & ICU Care.</p>
+                <small>456 Cloud Way</small>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" data-scroll>
+        <div class="section-title">
+            <h2>Latest Insights</h2>
+        </div>
+        <div class="category-card"
+            style="max-width: 600px; margin: 0 auto; display: flex; text-align: left; gap: 20px; align-items: center;">
+            <div style="min-width: 100px; height: 100px; background: #eee; border-radius: 20px;"></div>
+            <div>
+                <h4>5 Tips to keep your cat hydrated in summer</h4>
+                <p style="font-size: 0.9rem; color: var(--text-muted);">Ensure your feline stays cool with our
+                    flow-fountain tech...</p>
+                <a href="#" style="color: var(--primary); font-weight: 600; font-size: 0.8rem;">Read More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section id="contact" data-scroll>
+        <div class="section-title">
+            <h2>Book a Consultation</h2>
+            <p>Schedule a virtual check-up or reach us directly on WhatsApp at <strong>+92 303 2422421</strong>.</p>
+        </div>
+        <div class="contact-form">
+            <form id="consultation-form">
+                <div class="form-group">
+                    <label>Pet Name</label>
+                    <input type="text" placeholder="e.g. Luna" required id="pet-name">
+                </div>
+                <div class="form-group">
+                    <label>Species</label>
+                    <select id="pet-species">
+                        <option>Dog</option>
+                        <option>Cat</option>
+                        <option>Bird</option>
+                        <option>Exotic</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Service Needed</label>
+                    <select id="service-type">
+                        <option>General Consultation</option>
+                        <option selected>Vaccine Shot / Immunization</option>
+                        <option>Emergency Care</option>
+                        <option>Grooming Appointment</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Your Message</label>
+                    <textarea rows="4" placeholder="Describe the symptoms or vaccine history..."></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Schedule Now</button>
+            </form>
+        </div>
+    </section>
+
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/923032422421" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+        <span>WhatsApp Us</span>
+    </a>
+
+    <!-- AI Chat bubble -->
+    <div class="chat-bubble" id="chat-toggle">
+        <i class="fas fa-robot"></i>
+    </div>
+
+    <!-- Chat Window -->
+    <div class="chat-window" id="chat-window">
+        <div class="chat-header">
+            <span>Ask our AI Vet</span>
+            <i class="fas fa-times" id="close-chat" style="cursor: pointer;"></i>
+        </div>
+        <div class="chat-body" id="chat-messages">
+            <div class="message msg-ai">Hi! I'm your AI Pet Assistant. How is your pet feeling today?</div>
+        </div>
+        <div class="chat-input-area">
+            <input type="text" id="user-input" placeholder="Type a message...">
+            <button id="send-msg"><i class="fas fa-paper-plane"></i></button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer
+        style="padding: 80px 5%; text-align: center; border-top: 1px solid #eee; background: white; border-radius: 60px 60px 0 0; margin-top: 100px;"
+        data-scroll>
+        <div class="logo">PET<span style="opacity: 0.6; font-weight: 300;">GLIDE</span></div>
+        <p style="color: var(--text-muted); margin: 25px 0; max-width: 500px; margin-inline: auto;">Elevating pet health
+            with futuristic anti-gravity wellness and tech-optimized care.</p>
+        <div style="display: flex; justify-content: center; gap: 30px; font-size: 1.8rem; margin-bottom: 30px;">
+            <a href="https://www.facebook.com/share/1825K6NEqk/" target="_blank"
+                style="color: #1877f2; transition: 0.3s;" onmouseover="this.style.transform='translateY(-5px)'"
+                onmouseout="this.style.transform='translateY(0)'"><i class="fab fa-facebook"></i></a>
+            <a href="https://wa.me/923032422421" target="_blank" style="color: #25d366; transition: 0.3s;"
+                onmouseover="this.style.transform='translateY(-5px)'"
+                onmouseout="this.style.transform='translateY(0)'"><i class="fab fa-whatsapp"></i></a>
+        </div>
+        <div style="color: var(--text-muted); font-size: 0.9rem; border-top: 1px solid #f8f9fa; padding-top: 30px;">
+            &copy; 2026 PetGlide Premium Care. All rights reserved.
+        </div>
+    </footer>
+
+    <!-- Login/Signup Modal -->
+    <div class="modal-overlay" id="login-modal">
+        <div class="modal-content">
+            <i class="fas fa-times close-modal" id="close-login"></i>
+            <div class="modal-tabs">
+                <span class="tab active" id="tab-login">Login</span>
+                <span class="tab" id="tab-signup">Sign Up</span>
+            </div>
+
+            <!-- Login Form -->
+            <form id="login-form">
+                <div class="form-group">
+                    <label>Email Address</label>
+                    <input type="email" placeholder="email@example.com" required>
+                </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" placeholder="••••••••" required>
+                </div>
+                <button type="submit" class="submit-btn" style="margin-top: 10px;">Sign In</button>
+            </form>
+
+            <!-- Signup Form (Hidden by default) -->
+            <form id="signup-form" style="display: none;">
+                <div class="form-group">
+                    <label>Full Name</label>
+                    <input type="text" placeholder="John Doe" required>
+                </div>
+                <div class="form-group">
+                    <label>Email Address</label>
+                    <input type="email" placeholder="email@example.com" required>
+                </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" placeholder="••••••••" required>
+                </div>
+                <div class="form-group">
+                    <label>Account Type</label>
+                    <select id="reg-role"
+                        style="width: 100%; padding: 12px; border-radius: 12px; border: 1px solid #eee;">
+                        <option value="customer">Pet Owner / Customer</option>
+                    </select>
+                </div>
+                <button type="submit" class="submit-btn" style="margin-top: 10px;">Create Account</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Dashboard Panels -->
+    <div class="dashboard-overlay" id="dashboard-container">
+        <!-- Sidebar -->
+        <div class="dashboard-sidebar">
+            <h3 class="logo">PET<span style="color: var(--text-main)">GLIDE</span></h3>
+            <div id="sidebar-menu">
+                <!-- Menu items injected by JS -->
+            </div>
+            <div class="logout-btn" id="perform-logout">
+                <i class="fas fa-sign-out-alt"></i> Logout
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="dashboard-main">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px;">
+                <h2 id="dashboard-title">Dashboard</h2>
+                <div id="user-info">
+                    <span id="user-name">User Name</span>
+                    <span class="role-badge" id="user-role-badge">Admin</span>
+                </div>
+            </div>
+
+            <!-- Content injected by JS based on role -->
+            <div id="dashboard-content"></div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
