@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PetGlide | Royal Premium Futuristic Pet Care</title>
+    <meta name="description"
+        content="Experience the future of pet care at PetGlide. Premium Royal AI pet wellness for dogs, cats, birds, and exotic pets.">
+    <meta name="keywords"
+        content="virtual pet clinic, anti-gravity pet care, futuristic vet, royal pet care, golden pet wellness, PetGlide">
+    <meta name="author" content="PetGlide Team">
+    <link rel="canonical" href="https://petglide.com/">
+
+    <!-- Social Media / Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://petglide.com/">
+    <meta property="og:title" content="PetGlide | Royal Premium Futuristic Pet Care">
+    <meta property="og:description"
+        content="Elevating pet health with futuristic anti-gravity wellness and tech-optimized care.">
+    <meta property="og:image" content="https://petglide.com/pets_group.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://petglide.com/">
+    <meta property="twitter:title" content="PetGlide | Premium Anti-Gravity Veterinary Care">
+    <meta property="twitter:description"
+        content="Elevating pet health with futuristic anti-gravity wellness and tech-optimized care.">
+    <meta property="twitter:image" content="https://petglide.com/pets_group.png">
+
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Modern Typography: Syne and Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Animation & Interaction Libraries -->
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+
+<body class="dark-theme">
+
+    <!-- Ambient Mesh Gradients -->
+    <div class="mesh-gradient gradient-top-left"></div>
+    <div class="mesh-gradient gradient-bottom-right"></div>
+
+    <!-- Navigation -->
+    <nav id="main-nav">
+        <div class="logo">PET<span class="gold-text">GLIDE</span></div>
+        <div class="nav-links">
+            <a href="#categories" data-key="nav-categories">Categories</a>
+            <a href="#services" data-key="nav-services">Services</a>
+            <a href="#testimonials" data-key="nav-testimonials">Owners</a>
+            <a href="#contact" data-key="nav-contact">Consultation</a>
+        </div>
+        <div class="nav-right">
+             <button class="lang-toggle" id="toggle-lang" data-lang="en">Urdu</button>
+             <div id="auth-nav-area">
+                <a href="#" class="login-btn gold-border" id="open-login">Login</a>
+            </div>
+            <div class="menu-toggle" id="mobile-menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Wrapper for Smooth Scroll -->
+    <main id="smooth-wrapper">
+        <div id="smooth-content">
+            
+            <!-- Hero Section: Bento Grid Base -->
+            <section class="hero-bento">
+                <div class="hero-card hero-main glass-card" data-reveal>
+                    <div class="hero-text-content">
+                        <h1 data-key="hero-title">Your Pet's Health, <span class="gold-text">Elevated.</span></h1>
+                        <p data-key="hero-desc">Experience the future of pet wellness with our royal anti-gravity care approach. Light, airy, and tailored for every species.</p>
+                        <div class="hero-cta">
+                            <button class="gold-btn">Get Started <i class="fas fa-arrow-right"></i></button>
+                        </div>
+                    </div>
+                    <div class="hero-visual">
+                        <!-- 3D Interactive Centerpiece -->
+                        <div class="centerpiece-container" id="centerpiece-box">
+                            <img src="royal_animal_centerpiece_1772936713964.png" alt="3D Pet Icon" class="centerpiece-img">
+                            <div class="centerpiece-glow"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="hero-card info-card glass-card" data-reveal>
+                    <div class="info-stat">
+                        <span class="gold-text">24/7</span>
+                        <p>Royal AI Care</p>
+                    </div>
+                </div>
+                
+                <div class="hero-card info-card glass-card" data-reveal>
+                    <div class="info-stat">
+                        <span class="gold-text">100%</span>
+                        <p>Zero-G Comfort</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Search / Filter Results Area -->
+            <div id="search-overlay" style="display: none; padding: 20px; text-align: center; background: #fff;">
+                <h3>Search Results</h3>
+                <div id="search-results-grid" class="categories-grid"></div>
+            </div>
+
+            <!-- Bento Categories Section -->
+            <section id="categories" class="bento-section">
+                <div class="section-header" data-reveal>
+                    <h2 class="syne-heading">Pet <span class="gold-text">Categories</span></h2>
+                    <p>Specialized care for every member of your floating family.</p>
+                </div>
+
+                <div class="bento-grid" id="category-list">
+                    <!-- Cats (Featured) -->
+                    <div class="bento-item cat-card glass-card span-2" data-reveal>
+                        <div class="bento-content">
+                            <div class="bento-img-wrapper"><img src="royal_cat_icon_1772936905958.png" alt="Royal Cat"></div>
+                            <h3>Cats (بلیاں)</h3>
+                            <ul>
+                                <li><i class="fas fa-crown gold-text"></i> Premium Nutrition</li>
+                                <li><i class="fas fa-crown gold-text"></i> Expert Grooming</li>
+                                <li><i class="fas fa-crown gold-text"></i> Rare Breeds</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Dogs -->
+                    <div class="bento-item dog-card glass-card" data-reveal>
+                        <div class="bento-content">
+                            <div class="bento-img-wrapper"><img src="royal_dog_icon_1772936925421.png" alt="Royal Dog"></div>
+                            <h3>Dogs (کتے)</h3>
+                            <ul>
+                                <li><i class="fas fa-check gold-text"></i> Behavior Training</li>
+                                <li><i class="fas fa-check gold-text"></i> Health Checkups</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Exotic -->
+                    <div class="bento-item exotic-card glass-card" data-reveal>
+                        <div class="bento-content">
+                            <div class="bento-img-wrapper"><img src="royal_rabbit_icon_1772936960599.png" alt="Exotic Pets"></div>
+                            <h3>Exotic Pets</h3>
+                            <p>Specialized habitats for rabbits, hamsters, and turtles.</p>
+                        </div>
+                    </div>
+
+                    <!-- Birds -->
+                    <div class="bento-item bird-card glass-card span-2" data-reveal>
+                        <div class="bento-content">
+                            <div class="bento-img-wrapper"><img src="royal_bird_icon_1772936942561.png" alt="Royal Bird"></div>
+                            <h3>Birds (پرندے)</h3>
+                            <p>Aero-caging and high-altitude seed mixes for avian health.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Services Section -->
+            <section id="services" class="bento-section">
+                <div class="section-header" data-reveal>
+                    <h2 class="syne-heading">Our <span class="gold-text">Services</span></h2>
+                </div>
+                <div class="bento-grid">
+                    <div class="bento-item glass-card" data-reveal>
+                        <i class="fas fa-bell gold-text"></i>
+                        <h4>Vaccination Reminders</h4>
+                        <p>Automated royal alerts for every species.</p>
+                    </div>
+                    <div class="bento-item glass-card" data-reveal>
+                        <i class="fas fa-syringe gold-text"></i>
+                        <h4>Instant Vaccines</h4>
+                        <p>Fast, painless, digitally tracked shots.</p>
+                    </div>
+                    <div class="bento-item glass-card" data-reveal>
+                        <i class="fas fa-heartbeat gold-text"></i>
+                        <h4>Wellness Scans</h4>
+                        <p>AI-driven proactive diagnostic tools.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Testimonials Section -->
+            <section id="testimonials" class="bento-section">
+                <div class="section-header" data-reveal>
+                    <h2 class="syne-heading">Owner <span class="gold-text">Stories</span></h2>
+                </div>
+                <div class="testimonials-bento">
+                    <div class="testimonial-item glass-card" data-reveal>
+                        <div class="quote-header">
+                            <span class="pet-name">Luna (Husky)</span>
+                            <span class="owner-name">- Sarah Miller</span>
+                        </div>
+                        <p>"Luna felt weightless and calm in the royal grooming pods. Changing our life!"</p>
+                    </div>
+                    <div class="testimonial-item glass-card featured-testimonial" data-reveal>
+                         <div class="quote-header">
+                            <span class="pet-name">Oliver (Tabby Cat)</span>
+                            <span class="owner-name">- David Chen</span>
+                        </div>
+                        <p>"Oliver's arthritis made visits painful until we found PetGlide. He was actually purring during his scan. A blessing!"</p>
+                    </div>
+                    <div class="testimonial-item glass-card" data-reveal>
+                         <div class="quote-header">
+                            <span class="pet-name">Bella (Golden)</span>
+                            <span class="owner-name">- Emily Watson</span>
+                        </div>
+                        <p>"The zero-gravity suite sped up her healing significantly. Unmatched care."</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact & Directory -->
+            <section id="contact" class="contact-bento">
+                <div class="glass-card contact-main" data-reveal>
+                    <h2 class="syne-heading">Book <span class="gold-text">Consultation</span></h2>
+                    <p>WhatsApp: <strong>+92 303 2422421</strong></p>
+                    <form id="consultation-form">
+                        <input type="text" placeholder="Pet Name" required id="pet-name">
+                        <select id="pet-species">
+                            <option>Dog</option>
+                            <option>Cat</option>
+                            <option>Bird</option>
+                            <option>Exotic</option>
+                        </select>
+                        <textarea placeholder="Symptoms or history..." rows="3"></textarea>
+                        <button type="submit" class="gold-btn">Schedule Now</button>
+                    </form>
+                </div>
+                <div class="glass-card directory-card" data-reveal>
+                    <h4 class="gold-text">City Pet Clinic</h4>
+                    <p>Expert surgery. 123 Gravity Lane.</p>
+                    <hr class="gold-hr">
+                    <h4 class="gold-text">Happy Paws</h4>
+                    <p>24/7 Emergency. 456 Cloud Way.</p>
+                </div>
+            </section>
+
+            <!-- Footer -->
+            <footer class="royal-footer" data-reveal>
+                <div class="logo">PET<span class="gold-text">GLIDE</span></div>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/share/1825K6NEqk/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://wa.me/923032422421" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                </div>
+                <p>&copy; 2026 PetGlide Royal Care</p>
+            </footer>
+
+        </div>
+    </main>
+
+    <!-- Floating UI -->
+    <a href="https://wa.me/923032422421" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <div class="chat-bubble" id="chat-toggle">
+        <i class="fas fa-robot"></i>
+    </div>
+
+    <!-- AI Chat Window -->
+    <div class="chat-window" id="chat-window">
+        <div class="chat-header"><span>Ask AI Vet</span><i class="fas fa-times" id="close-chat"></i></div>
+        <div class="chat-body" id="chat-messages">
+             <div class="message msg-ai">Hi! I'm your Royal AI Assistant. How's your pet?</div>
+        </div>
+        <div class="chat-input-area">
+            <input type="text" id="user-input" placeholder="Type message...">
+            <button id="send-msg"><i class="fas fa-paper-plane"></i></button>
+        </div>
+    </div>
+
+    <!-- Modals & Overlay (Login/Dashboard kept but styled) -->
+    <div class="modal-overlay" id="login-modal">
+        <div class="modal-content glass-card">
+            <i class="fas fa-times close-modal" id="close-login"></i>
+            <div class="modal-tabs">
+                <span class="tab active" id="tab-login">Login</span>
+                <span class="tab" id="tab-signup">Sign Up</span>
+            </div>
+            <form id="login-form">
+                <div class="form-group"><label>Email</label><input type="email" required></div>
+                <div class="form-group"><label>Password</label><input type="password" required></div>
+                <button type="submit" class="gold-btn">Sign In</button>
+            </form>
+            <form id="signup-form" style="display: none;">
+                <div class="form-group"><label>Name</label><input type="text" required></div>
+                <div class="form-group"><label>Email</label><input type="email" required></div>
+                <div class="form-group"><label>Password</label><input type="password" required></div>
+                <button type="submit" class="gold-btn">Join Royalty</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="dashboard-overlay" id="dashboard-container">
+        <div class="dashboard-sidebar glass-card">
+            <h3 class="logo">PET<span class="gold-text">GLIDE</span></h3>
+            <div id="sidebar-menu"></div>
+            <div class="logout-btn" id="perform-logout"><i class="fas fa-sign-out-alt"></i> Logout</div>
+        </div>
+        <div class="dashboard-main glass-card">
+            <div class="dash-header">
+                <h2 id="dashboard-title">Dashboard</h2>
+                <div id="user-info"><span id="user-name"></span> <span class="role-badge" id="user-role-badge"></span></div>
+            </div>
+            <div id="dashboard-content"></div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
